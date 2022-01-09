@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function About(props) {
   let style = {};
 
-  if (props.mode == "light") {
+  if (props.mode === "light") {
     style = {
       color: "black",
       backgroundColor: "white",
@@ -18,7 +18,7 @@ export default function About(props) {
   return (
     <>
       <div className="container m-5 p-5" style={style}>
-        <h1>About Us</h1>
+        <h1>About TextUtils</h1>
         <p>TextUtils Features </p>
         <ul>
           <li>Convert text into Uppercase</li>
@@ -30,6 +30,7 @@ export default function About(props) {
         <a
           href="https://www.youtube.com/watch?v=-mJFZp84TIY&list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <strong>Course Link</strong>
         </a>

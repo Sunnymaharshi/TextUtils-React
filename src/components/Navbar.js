@@ -40,7 +40,7 @@ export default function Navbar(props) {
           </ul>
           <div
             className={`custom-control custom-switch text-${
-              props.mode == "light" ? "dark" : "light"
+              props.mode === "light" ? "dark" : "light"
             }`}
           >
             <input

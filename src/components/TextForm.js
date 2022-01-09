@@ -36,7 +36,7 @@ export default function TextForm(props) {
       <div
         className="container text-center"
         style={{
-          color: props.mode == "light" ? "black" : "white",
+          color: props.mode === "light" ? "black" : "white",
         }}
       >
         <h1>{props.heading}</h1>
@@ -46,8 +46,8 @@ export default function TextForm(props) {
               className="form-control"
               value={text}
               style={{
-                backgroundColor: props.mode == "light" ? "white" : "black",
-                color: props.mode == "light" ? "black" : "white",
+                backgroundColor: props.mode === "light" ? "white" : "black",
+                color: props.mode === "light" ? "black" : "white",
               }}
               id="myBox"
               rows={12}
@@ -95,7 +95,7 @@ export default function TextForm(props) {
       <div
         className="container my-3 text-center"
         style={{
-          color: props.mode == "light" ? "black" : "white",
+          color: props.mode === "light" ? "black" : "white",
         }}
       >
         <h2 className="text-center">Text Summary</h2>
