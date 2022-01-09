@@ -12,7 +12,6 @@ export default function About(props) {
     style = {
       color: "white",
       backgroundColor: "black",
-      border: "1px  solid  white",
     };
   }
   return (
