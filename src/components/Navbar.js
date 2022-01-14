@@ -1,14 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   return (
     <>
-      <nav className={`navbar navbar-${props.mode} bg-${props.mode}`}>
-        <a className="navbar-brand" href="#">
+      <nav
+        className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
+      >
+        <Link className="navbar-brand" to="/">
           {props.title}
-        </a>
-        {/* <button
+        </Link>
+        <button
           className="navbar-toggler"
           type="button"
           data-toggle="collapse"
@@ -19,20 +22,22 @@ export default function Navbar(props) {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        */}
-        <div className="justify-content-end" id="navbarNav">
-          {/* <ul className="navbar-nav">
+        <div
+          className="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul className="navbar-nav">
             <li className="nav-item active">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/">
                 Home <span className="sr-only">(current)</span>
-              </a>
+              </Link>
             </li>
-            {/* <li className="nav-item">
-              <a className="nav-link" to="/about">
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">
                 {props.aboutText}
-              </a>
-            </li> }
-          </ul> */}
+              </Link>
+            </li>
+          </ul>
           <div
             className={`custom-control custom-switch text-${
               props.mode === "light" ? "dark" : "light"
