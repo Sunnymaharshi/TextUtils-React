@@ -38,19 +38,63 @@ export default function Navbar(props) {
               </Link>
             </li>
           </ul>
+          <div className="d-flex">
+            <div
+              className="bg-primary rounded mx-2"
+              onClick={() => {
+                props.toggleMode("primary");
+              }}
+              style={{
+                height: "20px",
+                width: "20px",
+              }}
+            ></div>
+            <div
+              className="bg-danger rounded mx-2"
+              onClick={() => {
+                props.toggleMode("danger");
+              }}
+              style={{
+                height: "20px",
+                width: "20px",
+              }}
+            ></div>
+            <div
+              className="bg-success rounded mx-2"
+              onClick={() => {
+                props.toggleMode("success");
+              }}
+              style={{
+                height: "20px",
+                width: "20px",
+              }}
+            ></div>
+            <div
+              className="bg-warning rounded mx-2"
+              onClick={() => {
+                props.toggleMode("warning");
+              }}
+              style={{
+                height: "20px",
+                width: "20px",
+              }}
+            ></div>
+          </div>
           <div
             className={`custom-control custom-switch text-${
               props.mode === "light" ? "dark" : "light"
             }`}
           >
             <input
-              onClick={props.toggleMode}
+              onClick={() => {
+                props.toggleMode(null);
+              }}
               type="checkbox"
               className="custom-control-input"
               id="customSwitches"
             />
             <label className="custom-control-label" htmlFor="customSwitches">
-              Dark Mode
+              Toggle Mode
             </label>
           </div>
         </div>

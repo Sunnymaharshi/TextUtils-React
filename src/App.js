@@ -7,15 +7,31 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light");
-  const toggleMode = () => {
-    if (mode === "light") {
-      setMode("dark");
-      document.body.style.backgroundColor = "black";
-      showAlert("Dark Mode Enabled", "success");
+
+  const removeBodyClasses = () => {
+    document.body.classList.remove("bg-primary");
+    document.body.classList.remove("bg-warning");
+    document.body.classList.remove("bg-danger");
+    document.body.classList.remove("bg-sucess");
+    document.body.classList.remove("bg-light");
+    document.body.classList.remove("bg-dark");
+  };
+  const toggleMode = (cls) => {
+    removeBodyClasses();
+    if (cls != null) {
+      console.log("in");
+      document.body.classList.add("bg-" + cls);
     } else {
-      setMode("light");
-      document.body.style.backgroundColor = "white";
-      showAlert("Light Mode Enabled", "success");
+      if (mode === "light") {
+        setMode("dark");
+        document.body.classList.add("bg-dark");
+
+        showAlert("Dark Mode Enabled", "success");
+      } else {
+        setMode("light");
+        document.body.classList.add("bg-light");
+        showAlert("Light Mode Enabled", "success");
+      }
     }
   };
 
