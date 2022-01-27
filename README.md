@@ -1,5 +1,3 @@
-### TextUtils - ReactJS
+# _[Site link](https://sunnymaharshi.github.io/TextUtils-React/)_
 
-[Site link](https://sunnymaharshi.github.io/TextUtils-React/)
-
-Checkout other branch for site code
+### Checkout other branch for site code
